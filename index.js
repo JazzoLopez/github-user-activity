@@ -9,7 +9,14 @@ const username = process.argv[2];
 console.log(`fetching data from ${username}....`);
 fetchApiGithub(username)
     .then(data => {
-        console.log(data.length > 0 ? data[0].created_at : 'No data');
+        console.log
+        if (!data.length) {
+            console.log('No data available for this user.');
+            return; // Termina la ejecución si no hay datos
+        }
+        
+        console.log(`First event date: ${data[0].created_at}`);
+
         data.forEach(element => {
             console.log(`Type: ${element.type}`);
             console.log(`Repo: ${element.repo.name}`);
