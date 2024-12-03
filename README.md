@@ -7,5 +7,7 @@ Second project of a CLI app to display GitHub activities from [roadmap.sh](https
 Clone the repository and execute the following commands:
 
 ```bash
-git clone https://github.com/kamranahmedse/github-user-activity.git
+git clone https://github.com/JazzoLopez/github-user-activity.git
 cd github-user-activity
+# node index.js <username>
+node index.js JazzoLopez
